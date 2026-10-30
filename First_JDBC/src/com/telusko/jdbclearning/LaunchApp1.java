@@ -16,12 +16,8 @@ public class LaunchApp1 {
         Statement  statement=connect.createStatement();
 
         // Execute Query
-        String sql="insert into studentInfo(id,sname,sage,scity) values(2,'John',25,'Bengaluru')";
+        String sql="update studentInfo set sage=18 where id=2";
        int noOfRowsAffected= statement.executeUpdate(sql);
-
-       if(noOfRowsAffected==0) System.out.println("Unable to insert data into db");
-       else System.out.println("Data inserted successfully");
-
 
        //Process the result
         if(noOfRowsAffected==0){
